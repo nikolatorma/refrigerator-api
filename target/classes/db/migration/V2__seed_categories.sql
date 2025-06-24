@@ -1,4 +1,4 @@
-INSERT INTO category (name, icon) VALUES 
+INSERT INTO category (name, icon) VALUES
 ('Fruits', '🍎'),
 ('Vegetables', '🥦'),
 ('Meat', '🥩'),

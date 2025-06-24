@@ -11,6 +11,12 @@ services:
       - "5432:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "fridge_user", "-d", "refrigerator"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 5s
 
   refrigerator-api:
     build:

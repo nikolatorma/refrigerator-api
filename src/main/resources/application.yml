@@ -1,12 +1,19 @@
 spring:
+  application:
+    name: refrigerator-api
+  profiles:
+    active: dev
   datasource:
-    url: jdbc:postgresql://localhost:5432/refrigerator
     username: fridge_user
     password: fridge_pass
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
     show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
   docker:
     compose:
       enabled: true
@@ -14,9 +21,6 @@ spring:
     user:
       name: fridge_user
       password: fridge_pass
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
 
 server:
   port: 8080
