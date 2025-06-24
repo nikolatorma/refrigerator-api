@@ -1,0 +1,5 @@
+com\refrigerator\api\controller\GoodControllerTest.class
+com\refrigerator\api\IntegrationTestBase.class
+com\refrigerator\api\service\GoodServiceImplTest.class
+com\refrigerator\api\PostgresTestContainer.class
+com\refrigerator\api\service\GoodServiceImplIT.class

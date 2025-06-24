@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.refrigerator.api.config.JwtProperties",
+      "sourceType": "com.refrigerator.api.config.JwtProperties"
+    },
+    {
+      "name": "postgress",
+      "type": "com.refrigerator.api.config.PostgressProperties",
+      "sourceType": "com.refrigerator.api.config.PostgressProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.refrigerator.api.config.JwtProperties"
+    },
+    {
+      "name": "postgress.database-name",
+      "type": "java.lang.String",
+      "sourceType": "com.refrigerator.api.config.PostgressProperties"
+    },
+    {
+      "name": "postgress.image",
+      "type": "java.lang.String",
+      "sourceType": "com.refrigerator.api.config.PostgressProperties"
+    },
+    {
+      "name": "postgress.password",
+      "type": "java.lang.String",
+      "sourceType": "com.refrigerator.api.config.PostgressProperties"
+    },
+    {
+      "name": "postgress.username",
+      "type": "java.lang.String",
+      "sourceType": "com.refrigerator.api.config.PostgressProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

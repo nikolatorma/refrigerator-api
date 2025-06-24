@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fridge-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: refrigerator
+      POSTGRES_USER: fridge_user
+      POSTGRES_PASSWORD: fridge_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  refrigerator-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fridge-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/refrigerator
+      SPRING_DATASOURCE_USERNAME: fridge_user
+      SPRING_DATASOURCE_PASSWORD: fridge_pass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - postgres
+
+volumes:
+  pg_data:

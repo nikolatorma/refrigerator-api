@@ -1,0 +1,16 @@
+INSERT INTO category (name, icon) VALUES 
+('Fruits', '🍎'),
+('Vegetables', '🥦'),
+('Meat', '🥩'),
+('Seafood', '🦐'),
+('Dairy', '🧀'),
+('Dishes', '🍲'),
+('Drinks', '🥤'),
+('Alcohol', '🍷'),
+('Condiments', '🥫'),
+('Spices', '🌿'),
+('Bread', '🍞'),
+('Desserts', '🍰'),
+('Nuts', '🥜'),
+('Grains', '🌾'),
+('Etc.', '📦');
