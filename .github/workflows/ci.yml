@@ -30,6 +30,3 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t your-github-username/refrigerator-api:latest .
-
-      - name: Push Docker image
-        run: docker push your-github-username/refrigerator-api:latest
